@@ -7,11 +7,11 @@ We consider a multiscale strategy using superpixels to introduce spatial informa
 The one parameter which needs to be adjusted for this algorithm is related to the modeling errors.
 
 The code is implemented in MATLAB and includes:  
--  example1.m                - a demo script comparing the algorithms (DC1)  
--  example2.m                - a demo script comparing the algorithms (DC2)  
--  example_real1.m           - a demo script comparing the algorithms (...)  
--  example_real2.m           - a demo script comparing the algorithms (...)  
--  ./MUAV/                   - contains the MATLAB files associated with the BMUA-N algorithm  
+-  synthetic_examples.m      - a demo script comparing the algorithms using synthetic data  
+-  demo_cuprite.m            - a demo script comparing the algorithms for the Cuprite image  
+-  demo_jasperRidge.m        - a demo script comparing the algorithms for the Jasper Ridge image  
+-  demo_urban.m              - a demo script comparing the algorithms for the Urban subimage  
+-  ./BMUAN/                  - contains the MATLAB files associated with the BMUA-N algorithm  
 -  ./other_methods/          - contains the ..... methods  
 -  ./utils/                  - useful functions  
 -  ./DATA/                   - images used in the examples  
@@ -30,10 +30,20 @@ publication:
 
 
 ## INSTALLING & RUNNING:
-Just start MATLAB and run one of the demo scripts (e.g. example1.m, example2.m, etc).
+Just start MATLAB and run one of the demo scripts (e.g. synthetic_examples.m, etc).
 
 
+## NOTES:
 
+1.  The codes for the KHype and KHype-TV algorithms were provided by Jie Chen, available at:  
+    http://www.cedric-richard.fr/Matlab/chen2013nonlinear.zip  
+    http://www.cedric-richard.fr/Matlab/chen2014nonlinear2.zip
+
+2.  The codes for the CDA-NL algorithm were provided by Abderrahim Halimi, available at:  
+    https://sites.google.com/site/abderrahimhalimi/publications
+
+3.  The codes for the NDU algorithm was provided by Rita Ammanouil, available at:  
+    https://github.com/rammanouil/NonlinearUnmixingVector
 
 
 

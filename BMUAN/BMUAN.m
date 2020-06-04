@@ -1,8 +1,25 @@
 function [a_est_mscale,rmse_r_SPPX]=BMUAN(Y,M,nr,nc,sigma2_epsi)
-
+% ======================================================================
+% This code performs blind multiscale nonlinear unmixing, according to the paper:
+% 
+%    A Blind Multiscale Spatial Regularization Framework for Kernel-Based Spectral Unmixing 
+%    R.A. Borsoi, T. Imbiriba, J.C.M. Bermudez, C. Richard.
+%    IEEE Transactions on Image Processing, 2020.
+% 
+% INPUT: 
+%   Y: observed hyperspectral image (of size bands * pixels)
+%   M: endmember matrix (bands * # endmembres)
+%   nr,nc: size of the image (# of rows and columns) 
+% 
+% OUTPUT:
+%   a_est_mscale: estimated abundance maps
+%   rmse_r_SPPX:  image reconstruction error 
+%
+% Ricardo Borsoi, 06/2020
+% ======================================================================
 
 % if the constants are not estimated from the data, please substitute "noise" by the true noise present in the image
-noise = eps * ones(size(r)); % dummy placeholder (not used since the constants are estimated from the data)
+noise = eps * ones(size(Y)); % dummy placeholder (not used since the constants are estimated from the data)
 
 
 L = size(Y,1);
